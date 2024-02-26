@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face { font-family: Outfit; src: url('./assets/fonts/outfit/Outfit-VariableFont_wght.ttf'); } 
+@font-face { font-family: YoungSerif; src: url('./assets/fonts/young-serif/YoungSerif-Regular.ttf'); } 
+
+/* Basics */
+
+body {
+    background-color: hsl(30, 54%, 90%);
+    font-family: Outfit, sans-serif;
+    color: hsl(30, 10%, 34%);
+    font-size: 16px;
+}
+
+.mobile {
+    display: none;
+}
+
+ul, ol {
+    list-style-position: outside;
+    line-height: 25px;
+    padding: 15px;
+    padding-left: 30px;
+
+}
+
+li {
+    padding-top: 15px;
+    padding-left: 20px;
+}
+
+hr {
+    margin: 25px 0;
+    opacity: 0.5;
+}
+
+li::marker {
+    color: hsl(14, 45%, 36%);
+
+}
+
+ol li::marker {
+    font-weight: bold;
+}
+
+.recipe {
+    width: 700px;
+    margin: 100px auto;
+    background-color: hsl(0, 100%, 100%);
+    padding: 3%;
+    border-radius: 20px;
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.recipe h2 {
+    font-family: YoungSerif, serif;
+    color: hsl(14, 45%, 36%);
+    margin-top: 25px;
+    font-weight: 300;
+}
+
+.recipe h1 {
+    font-family: YoungSerif, serif;
+    margin: 30px 0 15px 0;
+    color: hsl(24, 5%, 18%);
+    font-weight: 300;
+}
+
+.recipe p {
+    margin: 25px 0;
+}
+
+/* Preparation */
+
+.preparation {
+    background-color: hsl(330, 100%, 98%);
+    border-radius: 10px;
+    padding: 3%;
+}
+
+.preparation h3 {
+    color: hsl(332, 51%, 32%);
+    font-weight: 600;
+}
+
+.preparation li::marker {
+    color: hsl(332, 51%, 32%);;
+}
+
+/* Table */
+
+.recipe table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table strong {
+    color: hsl(14, 45%, 36%);
+}
+
+table td {
+    padding: 10px 10px 10px 30px;
+}
+
+table td {
+    border-bottom: 1px solid hsla(30, 10%, 34%, 50%);
+}
+
+.no-border td {
+    border: none;
+}
+
+@media only screen and (max-width: 375px) {
+    .recipe {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        padding: 7%;
+    }
+
+    .recipe img {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .preparation {
+        padding: 7%;
+    }
+}
